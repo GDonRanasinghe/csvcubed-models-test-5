@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="9.489721775054932" tests='3' skipped='2'
+name="Skoscodelists" failures='0' errors='0'><testcase time="0" name="A_Basic_Code_List_Can_Be_Serialised_To_A_Valid_Csv-W_Described_In_Skos." status="skipped"
+         classname="Test_Outputting_Csv-Ws_Containing_`Skosconceptscheme`S."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A basic code list can be serialised to a valid CSV-W described in SKOS.
+                given a NewQbCodeList named &#34;Basic Code-list&#34; ... skipped in 0.0s 
+                when the code list is serialised to CSV-W ... skipped in 0.0s 
+                then the file at &#34;basic-code-list.csv&#34; should exist ... skipped in 0.0s 
+                then the file at &#34;basic-code-list.csv-metadata.json&#34; should exist ... skipped in 0.0s 
+                then the file at &#34;basic-code-list.table.json&#34; should exist ... skipped in 0.0s 
+                then csvlint validation of &#34;basic-code-list.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on &#34;basic-code-list.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then the RDF should pass &#34;skos&#34; SPARQL tests ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Code_List_With_Duplicate_Notations_Fails_Validation." status="skipped"
+         classname="Test_Outputting_Csv-Ws_Containing_`Skosconceptscheme`S."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A code list with duplicate notations fails validation.
+                given a NewQbCodeList named &#34;Contains Duplicates&#34; containing duplicates ... skipped in 0.0s 
+                when the code list is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;contains-duplicates.csv-metadata.json&#34; should fail with &#34;duplicate_key&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="9.489721775054932" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]A_Composite_Code_List_Can_Be_Serialised_To_A_Valid_Csv-W_Described_In_Skos." status="passed"
+         classname="Test_Outputting_Csv-Ws_Containing_`Skosconceptscheme`S."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]A composite code list can be serialised to a valid CSV-W described in SKOS.
+                given a CompositeQbCodeList named &#34;Composite Code List&#34; ... passed in 0.0007451s 
+                when the code list is serialised to CSV-W ... passed in 0.01452s 
+                then the file at &#34;composite-code-list.csv&#34; should exist ... passed in 0.0006838s 
+                then the file at &#34;composite-code-list.csv-metadata.json&#34; should exist ... passed in 0.0005882s 
+                then the file at &#34;composite-code-list.table.json&#34; should exist ... passed in 0.0004561s 
+                then csvlint validation of all CSV-Ws should succeed ... passed in 1.181s 
+                then csv2rdf on all CSV-Ws should succeed ... passed in 5.99s 
+                then the RDF should pass &#34;skos&#34; SPARQL tests ... passed in 2.29s 
+                then the RDF should contain ... passed in 0.01097s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

@@ -1,0 +1,44 @@
+Feature: Test outputting CSV-Ws containing `SKOS:ConceptScheme`s. # features/skoscodelists.feature:1
+
+  Scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]A basic code list can be serialised to a valid CSV-W described in SKOS.  # features/skoscodelists.feature:3
+    Given a NewQbCodeList named "Basic Code-list"                                                                                                # features/steps/skoscodelists.py:25
+    When the code list is serialised to CSV-W                                                                                                    # features/steps/skoscodelists.py:93
+    Then the file at "basic-code-list.csv" should exist                                                                                          # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/file.py:68
+    And the file at "basic-code-list.csv-metadata.json" should exist                                                                             # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/file.py:68
+    And the file at "basic-code-list.table.json" should exist                                                                                    # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/file.py:68
+    And csvlint validation of "basic-code-list.csv-metadata.json" should succeed                                                                 # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/csvlint.py:40
+    And csv2rdf on "basic-code-list.csv-metadata.json" should succeed                                                                            # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/csv2rdf.py:48
+    And the RDF should pass "skos" SPARQL tests                                                                                                  # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/sparqltests.py:45
+    And the RDF should contain                                                                                                                   # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/rdf.py:31
+      """
+        @prefix basicCodeList: <file:/tmp/basic-code-list.csv#>.
+      
+        basicCodeList:code-list a <http://www.w3.org/2004/02/skos/core#ConceptScheme>,
+          <http://www.w3.org/ns/dcat#Dataset>, <http://www.w3.org/ns/dcat#Resource>;
+        <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/>;
+        <http://purl.org/dc/terms/publisher> <https://www.gov.uk/government/organisations/office-for-national-statistics>;
+        <http://purl.org/dc/terms/creator> <https://www.gov.uk/government/organisations/office-for-national-statistics>;
+        <http://purl.org/dc/terms/title> "Basic Code-list"@en;
+        <http://www.w3.org/2000/01/rdf-schema#label> "Basic Code-list"@en;
+        <http://www.w3.org/2000/01/rdf-schema#comment> "Summary"@en;
+        <http://purl.org/dc/terms/description> "Description"@en;
+        <http://www.w3.org/ns/dcat#keyword> "Key word one"@en, "Key word two"@en;
+        <http://www.w3.org/ns/dcat#landingPage> <http://example.org/landing-page>;
+        <http://www.w3.org/ns/dcat#theme> <http://gss-data.org.uk/def/gdp#some-test-theme>;
+        <http://www.w3.org/ns/dcat#contactPoint> <mailto:something@example.org>.
+      
+        basicCodeList:1st-concept a <http://www.w3.org/2004/02/skos/core#Concept>;
+        <http://www.w3.org/2000/01/rdf-schema#comment> "This is the first concept.";
+        <http://www.w3.org/2000/01/rdf-schema#label> "First Concept";
+        <http://www.w3.org/2004/02/skos/core#inScheme> basicCodeList:code-list;
+        <http://www.w3.org/2004/02/skos/core#notation> "1st-concept";
+        <http://www.w3.org/ns/ui#sortPriority> 0 .
+      
+        basicCodeList:second-concept a <http://www.w3.org/2004/02/skos/core#Concept>;
+        <http://www.w3.org/2000/01/rdf-schema#label> "Second Concept";
+        <http://www.w3.org/2004/02/skos/core#broader> basicCodeList:1st-concept;
+        <http://www.w3.org/2004/02/skos/core#inScheme> basicCodeList:code-list;
+        <http://www.w3.org/2004/02/skos/core#notation> "second-concept";
+        <http://www.w3.org/ns/ui#sortPriority> 20 .
+      """
+

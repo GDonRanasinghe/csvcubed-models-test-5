@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="32.08839964866638" tests='31' skipped='30'
+name="Qbwriter" failures='0' errors='0'><testcase time="0" name="A_Qbcube_Should_Generate_Appropriate_Dcat_Metadata" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube should generate appropriate DCAT Metadata
+                given a single-measure QbCube with identifier &#34;qb-id-10002&#34; named &#34;Some Qube&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then the file at &#34;qb-id-10002.csv&#34; should exist ... skipped in 0.0s 
+                then the file at &#34;qb-id-10002.csv-metadata.json&#34; should exist ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_Should_Validate_Successfully_Where_Foreign_Key_Constraints_Are_Met." status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube should validate successfully where foreign key constraints are met.
+                given a single-measure QbCube named &#34;Some Qube&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then the file at &#34;a-code-list.csv-metadata.json&#34; should exist ... skipped in 0.0s 
+                then csvlint validation of &#34;some-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on &#34;some-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then the RDF should not contain any instances of &#34;http://www.w3.org/2004/02/skos/core#ConceptScheme&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_Should_Fail_To_Validate_Where_Foreign_Key_Constraints_Are_Not_Met." status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube should fail to validate where foreign key constraints are not met.
+                given a single-measure QbCube named &#34;Some Qube&#34; with codes not defined in the code-list ... skipped in 0.0s 
+                when the cube is serialised to CSV-W (suppressing missing uri value exceptions) ... skipped in 0.0s 
+                then the file at &#34;a-code-list.csv-metadata.json&#34; should exist ... skipped in 0.0s 
+                then csvlint validation of &#34;some-qube.csv-metadata.json&#34; should fail with &#34;unmatched_foreign_key_reference&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_Existing_Dimensions_Should_Not_Do_Foreign_Key_Checks." status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with existing dimensions should not do foreign key checks.
+                given a single-measure QbCube named &#34;Some Qube&#34; with existing dimensions ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;some-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Single-Measure_Qbcube_With_Duplicate_Rows_Should_Fail_Validation" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A single-measure QbCube with duplicate rows should fail validation
+                given a single-measure QbCube named &#34;Duplicate Qube&#34; with duplicate rows ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;duplicate-qube.csv-metadata.json&#34; should fail with &#34;duplicate_key&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Multi-Measure_Qbcube_Should_Pass_Validation" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A multi-measure QbCube should pass validation
+                given a multi-measure QbCube named &#34;Duplicate Qube&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;duplicate-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Multi-Measure_Qbcube_With_Duplicate_Rows_Should_Fail_Validation" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A multi-measure QbCube with duplicate rows should fail validation
+                given a multi-measure QbCube named &#34;Duplicate Qube&#34; with duplicate rows ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;duplicate-qube.csv-metadata.json&#34; should fail with &#34;duplicate_key&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Qbcube_New_Attribute_Values_And_Units_Should_Be_Serialised" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: QbCube new attribute values and units should be serialised
+                given a single-measure QbCube named &#34;Some Qube&#34; with new attribute values and units ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then the file at &#34;some-qube.csv&#34; should exist ... skipped in 0.0s 
+                then the file at &#34;some-qube.csv-metadata.json&#34; should exist ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Qbcube_Extended_Units_(And_New_Base_Units)_Should_Be_Serialised_Correctly." status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: QbCube extended units (and new base units) should be serialised correctly.
+                given a single-measure QbCube named &#34;Some Qube&#34; with one new unit extending another new unit ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_String_Literal_New_Attributes_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with string literal new attributes should validate successfully
+                given a single-measure QbCube named &#34;Qube with string literals&#34; with &#34;new&#34; &#34;string&#34; attribute ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;qube-with-string-literals.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_Numeric_Literal_New_Attributes_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with numeric literal new attributes should validate successfully
+                given a single-measure QbCube named &#34;Qube with int literals&#34; with &#34;new&#34; &#34;int&#34; attribute ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;qube-with-int-literals.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_Date_Literal_New_Attributes_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with date literal new attributes should validate successfully
+                given a single-measure QbCube named &#34;Qube with date literals&#34; with &#34;new&#34; &#34;date&#34; attribute ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;qube-with-date-literals.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_String_Literal_Existing_Attributes_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with string literal existing attributes should validate successfully
+                given a single-measure QbCube named &#34;Qube with string literals&#34; with &#34;existing&#34; &#34;string&#34; attribute ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;qube-with-string-literals.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_Numeric_Literal_Existing_Attributes_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with numeric literal existing attributes should validate successfully
+                given a single-measure QbCube named &#34;Qube with int literals&#34; with &#34;existing&#34; &#34;int&#34; attribute ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;qube-with-int-literals.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_With_Date_Literal_Existing_Attributes_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube with date literal existing attributes should validate successfully
+                given a single-measure QbCube named &#34;Qube with date literals&#34; with &#34;existing&#34; &#34;date&#34; attribute ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;qube-with-date-literals.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube,_By_Default,_Should_Include_File_Endings_In_Uris" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube, by default, should include file endings in URIs
+                given a single-measure QbCube named &#34;Default URI style qube&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then the cube&#39;s metadata should contain URLs with file endings ... skipped in 0.0s 
+                then csvlint validation of &#34;default-uri-style-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_Configured_With_Standard_Uri_Style_Should_Include_File_Endings_In_Uris" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube configured with Standard URI style should include file endings in URIs
+                given a single-measure QbCube named &#34;Standard URI style qube&#34; configured with &#34;Standard&#34; URI style ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then the cube&#39;s metadata should contain URLs with file endings ... skipped in 0.0s 
+                then csvlint validation of &#34;standard-uri-style-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_Configured_With_Withoutfileextensions_Uri_Style_Should_Exclude_File_Endings_In_Uris" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube configured with WithoutFileExtensions URI style should exclude file endings in URIs
+                given a single-measure QbCube named &#34;WithoutFileExtensions URI style qube&#34; configured with &#34;WithoutFileExtensions&#34; URI style ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then the cube&#39;s metadata should contain URLs without file endings ... skipped in 0.0s 
+                then csvlint validation of &#34;withoutfileextensions-uri-style-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Single-Measure_Qbcube_Should_Pass_Skos+Qb_Sparql_Test_Constraints" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A single-measure QbCube should pass skos+qb SPARQL test constraints
+                given a single-measure QbCube named &#34;Some Qube&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Multi-Measure_Qbcube_Should_Pass_Skos+Qb_Sparql_Test_Constraints" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A multi-measure QbCube should pass skos+qb SPARQL test constraints
+                given a multi-measure QbCube named &#34;Some Qube&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Locally_Defined_Single-Measure_Dataset_(With_Code-Lists)_Can_Be_Serialised_To_A_Standard_Csv-Qb" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A locally defined single-measure dataset (with code-lists) can be serialised to a standard CSV-qb
+                given a single-measure QbCube named &#34;single-measure qube with new definitions&#34; with all new units/measures/dimensions/attributes/codelists ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;single-measure-qube-with-new-definitions.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Locally_Defined_Multi-Measure_Dataset_(With_Code-Lists)_Can_Be_Serialised_To_A_Standard_Csv-Qb" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A locally defined multi-measure dataset (with code-lists) can be serialised to a standard CSV-qb
+                given a multi-measure QbCube named &#34;multi-measure qube with new definitions&#34; with all new units/measures/dimensions/attributes/codelists ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;multi-measure-qube-with-new-definitions.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Single-Measure_Dataset_(With_Code-List)_Having_Existing_Resources_Can_Be_Serialised_To_A_Standard_Csv-Qb" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A single-measure dataset (with code-list) having existing resources can be serialised to a standard CSV-qb
+                given a single measure QbCube named &#34;single-measure qube with existing resources&#34; with existing units/measure/dimensions/attribute/codelists ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;single-measure-qube-with-existing-resources.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then some additional turtle is appended to the resulting RDF ... skipped in 0.0s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Multi-Measure_Dataset_(With_Code-List)_Having_Existing_Resources_Can_Be_Serialised_To_A_Standard_Csv-Qb" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A multi-measure dataset (with code-list) having existing resources can be serialised to a standard CSV-qb
+                given a multi measure QbCube named &#34;multi-measure qube with existing resources&#34; with existing units/measure/dimensions/attribute/codelists ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;multi-measure-qube-with-existing-resources.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then some additional turtle is appended to the resulting RDF ... skipped in 0.0s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="32.08839964866638" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]A_Codelist_Defined_In_A_Csv-W_Should_Be_Copied_To_The_Output_Directory" status="passed"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]A codelist defined in a CSV-W should be copied to the output directory
+                given the existing test-case file &#34;qbwriter/code-list.csv-metadata.json&#34; ... passed in 0.2423s 
+                given the existing test-case file &#34;qbwriter/code-list.table.json&#34; ... passed in 0.2083s 
+                given the existing test-case file &#34;qbwriter/code-list.csv&#34; ... passed in 0.2074s 
+                given a QbCube named &#34;Some Qube&#34; with code-list defined in an existing CSV-W &#34;qbwriter/code-list.csv-metadata.json&#34; ... passed in 0.02166s 
+                then the CSVqb should pass all validations ... passed in 0.08463s 
+                when the cube is serialised to CSV-W ... passed in 0.09075s 
+                then the file at &#34;code-list.csv-metadata.json&#34; should exist ... passed in 0.000658s 
+                then the file at &#34;code-list.table.json&#34; should exist ... passed in 0.0005329s 
+                then the file at &#34;code-list.csv&#34; should exist ... passed in 0.0004127s 
+                then csvlint validation of all CSV-Ws should succeed ... passed in 7.45s 
+                then csv2rdf on all CSV-Ws should succeed ... passed in 21.96s 
+                then the RDF should pass &#34;skos, qb&#34; SPARQL tests ... passed in 1.796s 
+                then the RDF should contain ... passed in 0.02553s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Cube_With_An_Option_Attribute_Which_Has_Missing_Data_Values_Should_Validate_Successfully" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A cube with an option attribute which has missing data values should validate successfully
+                given a single-measure QbCube named &#34;Some Qube&#34; with optional attribute values missing ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Each_Observation_Should_Have_Type_Httppurl.Orglinked-Datacube#Observation_And_Be_Part_Of_The_Dataset" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Each Observation should have Type http://purl.org/linked-data/cube#Observation and be part of the dataset
+                given a single-measure QbCube named &#34;Some Qube&#34; ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csv2rdf on &#34;some-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+                then the RDF should contain ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Observation_Values_Are_Required_Where_No_`Sdmxaobsstatus`_Attribute_Column_Is_Present" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Observation Values are Required where no `sdmxa:ObsStatus` Attribute Column is Present
+                given a single-measure QbCube named &#34;Bad Qube&#34; with missing observation values ... skipped in 0.0s 
+                then the CSVqb should fail validation with &#34;Missing value(s) found for &#39;Value&#39; in row(s) 1&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;bad-qube.csv-metadata.json&#34; should fail with &#34;required. Row: 3,3&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Observation_Values_Are_Optional_Where_An_`Sdmxaobsstatus`_Attribute_Is_Present" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Observation Values are Optional where an `sdmxa:ObsStatus` Attribute is Present
+                given a single-measure QbCube named &#34;Good Qube&#34; with missing observation values and `sdmxa:obsStatus` replacements ... skipped in 0.0s 
+                then the CSVqb should pass all validations ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;good-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Observation_Values_Are_Required_Where_An_`Sdmxaobsstatus`_Attribute_Column_Is_Present_But_No_Value_Is_Set." status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Observation Values are Required where an `sdmxa:ObsStatus` Attribute Column is present but no value is set.
+                given a single-measure QbCube named &#34;Bad Qube&#34; with missing observation values and missing `sdmxa:obsStatus` replacements ... skipped in 0.0s 
+                then the CSVqb should fail validation with &#34;Missing value(s) found for &#39;Value&#39; in row(s) 0&#34; ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of &#34;bad-qube.csv-metadata.json&#34; should succeed ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="A_Qbcube_Which_References_A_Legacy_Composite_Code_List_Should_Pass_All_Tests" status="skipped"
+         classname="Test_Outputting_Csv-Ws_With_Qb_Flavouring."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: A QbCube which references a legacy composite code list should pass all tests
+                given a QbCube named &#34;Some Qube&#34; which references a legacy composite code-list ... skipped in 0.0s 
+                when the cube is serialised to CSV-W ... skipped in 0.0s 
+                then csvlint validation of all CSV-Ws should succeed ... skipped in 0.0s 
+                then csv2rdf on all CSV-Ws should succeed ... skipped in 0.0s 
+                then the RDF should pass &#34;qb, skos&#34; SPARQL tests ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

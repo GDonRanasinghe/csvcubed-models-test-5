@@ -1,5 +1,5 @@
 Feature: Behaviour testing of csvcubed inspect.
-
+    
     Scenario: inspect should produce the expected printable for data cube metadata json-ld input of type multi-unit multi-measure.
         Given the existing test-case file "cli/inspect/multi-unit_multi-measure/alcohol-bulletin.csv-metadata.json"
         And the existing test-case file "cli/inspect/multi-unit_multi-measure/alcohol-bulletin.csv"

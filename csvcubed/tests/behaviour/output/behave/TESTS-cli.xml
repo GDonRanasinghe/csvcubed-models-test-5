@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="1.2710545063018799" tests='1' skipped='0'
+name="Cli" failures='0' errors='0'><testcase time="1.2710545063018799" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]The_Csvcubed_Build_Command_Should_Output_A_Log_File" status="passed"
+         classname="Test_The_Csvcubed_Command_Line_Interface."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]The csvcubed build command should output a log file
+                given the existing test-case file &#34;configloaders/data.csv&#34; ... passed in 0.1377s 
+                given the existing test-case file &#34;configloaders/info.json&#34; ... passed in 0.1644s 
+                when the csvcubed CLI is run with &#34;build --log-level debug --config configloaders/info.json configloaders/data.csv&#34; ... passed in 0.968s 
+                then the csvcubed CLI should fail with status code 1 ... passed in 0.0001893s 
+                then the log file should exist ... passed in 0.0002441s 
+                then remove test log files ... passed in 0.0004616s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

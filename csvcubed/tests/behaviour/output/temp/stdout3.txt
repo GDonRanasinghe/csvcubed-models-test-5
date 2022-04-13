@@ -1,0 +1,9 @@
+Feature: Test outputting CSV-Ws with Qb flavouring. # features/qbwriter.feature:1
+
+  Scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]A QbCube which references a legacy composite code list should pass all tests  # features/qbwriter.feature:478
+    Given a QbCube named "Some Qube" which references a legacy composite code-list                                                                    # features/steps/qbwriter.py:744
+    When the cube is serialised to CSV-W                                                                                                              # features/steps/qbwriter.py:422
+    Then csvlint validation of all CSV-Ws should succeed                                                                                              # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/csvlint.py:32
+    And csv2rdf on all CSV-Ws should succeed                                                                                                          # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/csv2rdf.py:58
+    And the RDF should pass "qb, skos" SPARQL tests                                                                                                   # ../../../csvcubed-devtools/csvcubeddevtools/behaviour/sparqltests.py:45
+

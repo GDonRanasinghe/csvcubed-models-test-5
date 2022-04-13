@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="0.3048105239868164" tests='3' skipped='2'
+name="Cube" failures='0' errors='0'><testcase time="0" name="Output_A_Cube_And_Errors_When_Created_From_Both_Config_And_Data" status="skipped"
+         classname="Cube!"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Output a cube and errors when created from both config and data
+                given The config json file &#34;v1.0/cube_data_config_ok.json&#34; and the existing tidy data csv file &#34;v1.0/cube_data_config_ok.csv&#34; ... skipped in 0.0s 
+                when The cube is created ... skipped in 0.0s 
+                then The cube Metadata should match ... skipped in 0.0s 
+                then The cube Columns should match ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0.3048105239868164" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]Output_A_Cube_And_Errors_When_Created_Data_Only" status="passed"
+         classname="Cube!"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]Output a cube and errors when created data only
+                given The existing tidy data csv file &#34;v1.0/cube_data_convention_ok.csv&#34; ... passed in 0.001134s 
+                when The cube is created ... passed in 0.3015s 
+                then The cube Metadata should match ... passed in 0.0004411s 
+                then The cube Columns should match ... passed in 0.001737s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Output_A_Cube_Combining_Config_And_Convention" status="skipped"
+         classname="Cube!"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: Output a cube combining config and convention
+                given The config json file &#34;v1.0/cube_data_part_config.json&#34; and the existing tidy data csv file &#34;v1.0/cube_data_part_config.csv&#34; ... skipped in 0.0s 
+                when The cube is created ... skipped in 0.0s 
+                then The cube Metadata should match ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

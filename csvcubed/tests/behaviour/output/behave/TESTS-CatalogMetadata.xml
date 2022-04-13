@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="0.15298056602478027" tests='1' skipped='0'
+name="Catalogmetadata" failures='0' errors='0'><testcase time="0.15298056602478027" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]This_Should_Suceed_When_Multiple_Landing_Pages_Are_Supported" status="passed"
+         classname="Testing_Catalogmetadata"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]This should suceed when multiple landing pages are supported
+                given the existing test-case file &#34;MultipleLandingPageError/CatalogMetadata.json&#34; ... passed in 0.1329s 
+                when loading the existing Catalog Metadata file &#34;MultipleLandingPageError/CatalogMetadata.json&#34; ... passed in 0.003163s 
+                when the Catalog Metadata file is converted to Turtle with dataset URI &#34;http://dataset-uri&#34; ... passed in 0.008928s 
+                then the RDF should contain ... passed in 0.008028s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

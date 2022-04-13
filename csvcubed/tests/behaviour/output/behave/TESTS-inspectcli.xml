@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="0.10160470008850098" tests='7' skipped='6'
+name="Inspectcli" failures='1' errors='0'><testcase time="0" name="Inspect_Should_Produce_The_Expected_Printable_For_Data_Cube_Metadata_Json-Ld_Input_Of_Type_Multi-Unit_Multi-Measure." status="skipped"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: inspect should produce the expected printable for data cube metadata json-ld input of type multi-unit multi-measure.
+                given the existing test-case file &#34;cli/inspect/multi-unit_multi-measure/alcohol-bulletin.csv-metadata.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_multi-measure/alcohol-bulletin.csv&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_multi-measure/alcohol-content.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_multi-measure/alcohol-sub-type.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_multi-measure/clearance-origin.table.json&#34; ... skipped in 0.0s 
+                when the Metadata file path is detected and validated &#34;cli/inspect/multi-unit_multi-measure/alcohol-bulletin.csv-metadata.json&#34; ... skipped in 0.0s 
+                when the csv file path is detected and validated &#34;cli/inspect/multi-unit_multi-measure/alcohol-bulletin.csv&#34; ... skipped in 0.0s 
+                when the Metadata File json-ld is loaded to a rdf graph ... skipped in 0.0s 
+                when the Metadata File is validated ... skipped in 0.0s 
+                when the Printables for data cube are generated ... skipped in 0.0s 
+                then the Type Printable should be &#34;- This file is a data cube.&#34; ... skipped in 0.0s 
+                then the Catalog Metadata Printable should be ... skipped in 0.0s 
+                then the Data Structure Definition Printable should be ... skipped in 0.0s 
+                then the Code List Printable should be ... skipped in 0.0s 
+                then the Dataset Information Printable should be ... skipped in 0.0s 
+                then the Dataset Value Counts Printable should be ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Inspect_Should_Produce_The_Expected_Printable_For_Data_Cube_Metadata_Json-Ld_Input_Of_Type_Multi-Unit_Single-Measure." status="skipped"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: inspect should produce the expected printable for data cube metadata json-ld input of type multi-unit single-measure.
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2019.csv-metadata.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2019.csv&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/ghg.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/ghg-grouped.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/ipcc-code.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/year.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/national-communication-sector.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/national-communication-sub-sector.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/national-communication-category.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/source.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/national-communication-fuel-group.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/national-communication-fuel.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/multi-unit_single-measure/activity-name.table.json&#34; ... skipped in 0.0s 
+                when the Metadata file path is detected and validated &#34;cli/inspect/multi-unit_single-measure/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2019.csv-metadata.json&#34; ... skipped in 0.0s 
+                when the Metadata File json-ld is loaded to a rdf graph ... skipped in 0.0s 
+                when the Metadata File is validated ... skipped in 0.0s 
+                when the Printables for data cube are generated ... skipped in 0.0s 
+                then the Type Printable should be &#34;- This file is a data cube.&#34; ... skipped in 0.0s 
+                then the Catalog Metadata Printable should be ... skipped in 0.0s 
+                then the Data Structure Definition Printable should be ... skipped in 0.0s 
+                then the Code List Printable should be ... skipped in 0.0s 
+                then the Dataset Information Printable should be ... skipped in 0.0s 
+                then the Dataset Value Counts Printable should be ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Inspect_Should_Produce_The_Expected_Printable_For_Data_Cube_Metadata_Json-Ld_Input_Of_Type_Single-Unit_Multi-Measure." status="skipped"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: inspect should produce the expected printable for data cube metadata json-ld input of type single-unit multi-measure.
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2020.csv-metadata.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2020.csv&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/ghg.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/ghg-grouped.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/ipcc-code.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/year.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/national-communication-sector.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/national-communication-sub-sector.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/national-communication-category.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/source.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/national-communication-fuel-group.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/national-communication-fuel.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_multi-measure/activity-name.table.json&#34; ... skipped in 0.0s 
+                when the Metadata file path is detected and validated &#34;cli/inspect/single-unit_multi-measure/final-uk-greenhouse-gas-emissions-national-statistics-1990-to-2020.csv-metadata.json&#34; ... skipped in 0.0s 
+                when the Metadata File json-ld is loaded to a rdf graph ... skipped in 0.0s 
+                when the Metadata File is validated ... skipped in 0.0s 
+                when the Printables for data cube are generated ... skipped in 0.0s 
+                then the Type Printable should be &#34;- This file is a data cube.&#34; ... skipped in 0.0s 
+                then the Catalog Metadata Printable should be ... skipped in 0.0s 
+                then the Data Structure Definition Printable should be ... skipped in 0.0s 
+                then the Code List Printable should be ... skipped in 0.0s 
+                then the Dataset Information Printable should be ... skipped in 0.0s 
+                then the Dataset Value Counts Printable should be ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Inspect_Should_Produce_The_Expected_Printable_For_Data_Cube_Metadata_Json-Ld_Input_Of_Type_Single-Unit_Single-Measure." status="skipped"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: inspect should produce the expected printable for data cube metadata json-ld input of type single-unit single-measure.
+                given the existing test-case file &#34;cli/inspect/single-unit_single-measure/energy-trends-uk-total-energy.csv-metadata.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/single-unit_single-measure/energy-trends-uk-total-energy.csv&#34; ... skipped in 0.0s 
+                when the Metadata file path is detected and validated &#34;cli/inspect/single-unit_single-measure/energy-trends-uk-total-energy.csv-metadata.json&#34; ... skipped in 0.0s 
+                when the csv file path is detected and validated &#34;cli/inspect/single-unit_single-measure/energy-trends-uk-total-energy.csv&#34; ... skipped in 0.0s 
+                when the Metadata File json-ld is loaded to a rdf graph ... skipped in 0.0s 
+                when the Metadata File is validated ... skipped in 0.0s 
+                when the Printables for data cube are generated ... skipped in 0.0s 
+                then the Type Printable should be &#34;- This file is a data cube.&#34; ... skipped in 0.0s 
+                then the Catalog Metadata Printable should be ... skipped in 0.0s 
+                then the Data Structure Definition Printable should be ... skipped in 0.0s 
+                then the Code List Printable should be ... skipped in 0.0s 
+                then the Dataset Information Printable should be ... skipped in 0.0s 
+                then the Dataset Value Counts Printable should be ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Inspect_Should_Produce_Printable_For_Code_List_Metadata_Json-Ld_Input" status="skipped"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: inspect should produce printable for code list metadata json-ld input
+                given the existing test-case file &#34;cli/inspect/alcohol-content.csv-metadata.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/alcohol-content.table.json&#34; ... skipped in 0.0s 
+                given the existing test-case file &#34;cli/inspect/alcohol-content.csv&#34; ... skipped in 0.0s 
+                when the Metadata file path is detected and validated &#34;cli/inspect/alcohol-content.csv-metadata.json&#34; ... skipped in 0.0s 
+                when the csv file path is detected and validated &#34;cli/inspect/alcohol-content.csv&#34; ... skipped in 0.0s 
+                when the Metadata File json-ld is loaded to a rdf graph ... skipped in 0.0s 
+                when the Metadata File is validated ... skipped in 0.0s 
+                when the Printables for code list are generated ... skipped in 0.0s 
+                then the Type Printable should be &#34;- This file is a code list.&#34; ... skipped in 0.0s 
+                then the Catalog Metadata Printable should be ... skipped in 0.0s 
+                then the Dataset Information Printable should be ... skipped in 0.0s 
+                then the Concepts Information Printable should be ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0.10160470008850098" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]Inspect_Should_Produce_Printable_For_Code_List_Metadata_Json-Ld_Input_With_Concepts_Hierarchy_Depth_Of_More_Than_One" status="failed"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><failure type="Exception" message=''>
+                        <![CDATA[ Failing step: given the existing test-case file "cli/inspect/itis-industry.csv-metadata.json" ... failed in 0.1016s  Location:Featuresinspectcli.Feature
+                         File "/root/.cache/pypoetry/virtualenvs/csvcubed-nDHOLPMn-py3.10/lib/python3.10/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+
+                  File "/root/.cache/pypoetry/virtualenvs/csvcubed-nDHOLPMn-py3.10/lib/python3.10/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+
+                  File "/workspaces/csvcubed/csvcubed-devtools/csvcubeddevtools/behaviour/file.py", line 22, in step_impl
+    raise Exception(f"Could not find test-case file {file}")
+                        ]]>
+                    </failure><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]inspect should produce printable for code list metadata json-ld input with concepts hierarchy depth of more than one
+                given the existing test-case file &#34;cli/inspect/itis-industry.csv-metadata.json&#34; ... failed in 0.1016s 
+                given the existing test-case file &#34;cli/inspect/itis-industry.csv&#34; ... skipped in 0.0s 
+                when the Metadata file path is detected and validated &#34;cli/inspect/itis-industry.csv-metadata.json&#34; ... skipped in 0.0s 
+                when the csv file path is detected and validated &#34;cli/inspect/itis-industry.csv&#34; ... skipped in 0.0s 
+                when the Metadata File json-ld is loaded to a rdf graph ... skipped in 0.0s 
+                when the Metadata File is validated ... skipped in 0.0s 
+                when the Printables for code list are generated ... skipped in 0.0s 
+                then the Type Printable should be &#34;- This file is a code list.&#34; ... skipped in 0.0s 
+                then the Catalog Metadata Printable should be ... skipped in 0.0s 
+                then the Dataset Information Printable should be ... skipped in 0.0s 
+                then the Concepts Information Printable should be ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase><testcase time="0" name="Inspect_Should_Output_Error_When_The_Metadata_Json-Ld_Input_Does_Not_Exist" status="skipped"
+         classname="Behaviour_Testing_Of_Csvcubed_Inspect."><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: inspect should output error when the metadata json-ld input does not exist
+                given a none existing test-case file &#34;cli/inspect/not_exists.csv-metadata.json&#34; ... skipped in 0.0s 
+                then the file not found error is displayed &#34;Could not find test-case file&#34; ... skipped in 0.0s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>

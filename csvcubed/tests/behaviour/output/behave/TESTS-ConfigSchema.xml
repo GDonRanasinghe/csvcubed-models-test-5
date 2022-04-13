@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite time="0.2518196105957031" tests='1' skipped='0'
+name="Configschema" failures='0' errors='0'><testcase time="0.2518196105957031" name="Py3.10.4_(Main,_Apr__7_2022,_031556)_[Gcc_10.2.1_20210110]This_Should_Succeed_When_A_A_Valid_Csv_And_Config.Json_File_Are_Provided" status="passed"
+         classname="Testing_Cube_From_Config_Json"><system-out>
+            <![CDATA[
+            @scenario.begin
+                
+                scenario: py3.10.4 (main, Apr  7 2022, 03:15:56) [GCC 10.2.1 20210110]This should succeed when a a valid csv and config.json file are provided
+                given the existing test-case file &#34;readers/cube-config/v1.0/cube_data_config_ok.json&#34; ... passed in 0.1034s 
+                given the existing test-case file &#34;MultipleLandingPageError/CatalogMetadata.json&#34; ... passed in 0.1279s 
+                when loading the existing Catalog Metadata file &#34;MultipleLandingPageError/CatalogMetadata.json&#34; ... passed in 0.003722s 
+                when the Catalog Metadata file is converted to Turtle with dataset URI &#34;http://dataset-uri&#34; ... passed in 0.009344s 
+                then the RDF should contain ... passed in 0.007425s 
+@scenario.end
+            ----------------------------------------------------------------------------------------------------
+            ]]>
+            </system-out>
+        </testcase></testsuite>
